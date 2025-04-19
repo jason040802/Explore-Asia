@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thailand Travel Guide</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .hero {
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .overview-style {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      height: 100%;
+      color: black !important; /* Default text color black */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover .card-title,
+    .card:hover .card-text {
+      color: blue !important; /* Hover color: Bootstrap blue */
+    }
+
+    .food-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .weather-box {
+      background-color: #f3f7cc;
+      border-left: 5px solid #f2ec8e;
+      padding: 20px;
+      margin: 50px 0;
+      border-radius: 8px;
+    }
+
+    .footer-space {
+      margin-bottom: 40px;
+    }
+
+    .culture-img {
+      max-height: 100px;
+      width: auto;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    a.card,
+    a.card:hover,
+    a.card:visited,
+    a.card:active,
+    a.card * {
+      color: black !important;
+      text-decoration: none !important;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      color: #f39c12;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-home:hover {
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero" id="hero">
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+    </a>
+    <div class="text-center">
+      <h1 class="display-3 overview-style">Thailand</h1>
+      <p class="lead">Your ultimate travel companion to explore the wonders of Thailand!</p>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Discover Thailand</strong></h2>
+    <p class="text-center">Thailand is a vibrant blend of culture, nature, and flavor. From lively cities and golden temples to tropical islands and flavorful street food, it offers a rich and unforgettable experience for every traveler.</p>
+    <div class="text-center">
+      <img src="flag.jpeg" alt="Cultural illustration" class="culture-img">
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Top Destinations</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="bangkok.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="maeklong.jpeg" class="card-img-top" alt="Bangkok">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Bangkok</h5>
+              <p class="card-text">Experience the thrill as trains glide through the bustling Maeklong Railway Market.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="phuket.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="khaophingkan.jpeg" class="card-img-top" alt="Phuket">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Phuket</h5>
+              <p class="card-text">Discover the dramatic cliffs of Khao Phing Kan, Phuket's famous James Bond Island.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="chiangmai.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="whitetemple.jpeg" class="card-img-top" alt="Chiang Mai">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Chiang Mai</h5>
+              <p class="card-text">Admire the ethereal beauty of the White Temple in Chiang Mai.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Must-Try Food</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="stickyrice.jpeg" alt="Mango Sticky Rice" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Mango Sticky Rice</h5>
+        <p>Sweet ripe mango paired with creamy coconut sticky rice—Thailand's beloved dessert.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="tomyam.jpeg" alt="Tom Yam Soup" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Tom Yam Soup</h5>
+        <p>A bold and tangy Thai soup with shrimp, lemongrass, and chili—Tom Yum bursts with flavor.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="pancake.jpeg" alt="Banana Chocolate Pancake" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Banana Chocolate Pancake</h5>
+        <p>FCrispy on the outside, gooey banana and rich chocolate inside—Thailand’s favorite street-side pancake treat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Travel Video</strong></h2>
+    <div class="video-container">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n6uOLn9syC0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="container my-5 footer-space">
+    <h2 class="section-title"><strong>Weather Tips</strong></h2>
+    <div class="weather-box">
+      <p><strong>🌧️ Rainy Season:</strong> Expect heavy showers from June to October. Pack an umbrella and quick-dry clothes!</p>
+      <p><strong>☀️ Hot & Humid:</strong> Thailand stays warm year-round—wear breathable clothing and drink plenty of water.</p>
+      <p><strong>🏝️ Beach Weather:</strong> November to April is perfect for island trips, with clear skies and calm seas.</p>
+    </div>
+  </section>
+
+    
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <footer class="text-center p-4 bg-dark text-white">
+    <p class="mt-3">Follow us on</p>
+    <div class="d-flex justify-content-center my-3">
+      <!-- Social Media Icons -->
+      <a href="https://www.facebook.com/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/lonelyplanet/" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+  <footer class="text-center p-4 bg-dark text-white">
+    <p>&copy; 2025 Thailand Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const heroImages = [
+      'thailand1.jpeg',
+      'thailand2.jpeg',
+      'thailand3.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const hero = document.getElementById('hero');
+
+    function swapHeroImage() {
+      hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+      currentIndex = (currentIndex + 1) % heroImages.length;
+    }
+
+    swapHeroImage();
+    setInterval(swapHeroImage, 4000);
+  </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeju Island Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      height: 60vh;
+      background-image: url('jeju1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+    .hotel-exterior { opacity: 1; z-index: 1; }
+    .hotel-room { opacity: 0; z-index: 2; }
+    .hotel-card:hover .hotel-exterior { opacity: 0; }
+    .hotel-card:hover .hotel-room { opacity: 1; }
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="korea.html">Korea Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Jeju Island</h1>
+    <p>제주도</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p class="jeju-quote">
+        <h2><em>"Jeju is Korea’s island of peace, nature, and volcanic beauty."</em></h2> — <span class="quote-author"><b>UNESCO World Heritage</b></span>
+      </p>
+      <p>Jeju Island is a volcanic paradise, famous for its natural beauty, scenic coastlines, lava tubes, and Hallasan Mountain. It's a favorite getaway for both locals and international travelers.</p>
+      <p>From beach sunsets to forest walks, and from quirky museums to traditional stone walls, Jeju offers relaxation and adventure in equal measure.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Jeju</h2>
+      <div class="row">
+        <!-- Hallasan Mountain -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="hallasan.jpeg" class="card-img-top" alt="Hallasan Mountain" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Hallasan Mountain</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Central Jeju</p>
+              <p class="card-text">South Korea’s highest peak, rises majestically at the heart of Jeju Island, offering scenic trails through lush forests and breathtaking crater views.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manjanggul Cave -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="manjanggul.jpeg" class="card-img-top" alt="Manjanggul Cave" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Manjanggul Cave</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Gujwa-eup, Jeju-si, Jeju-do</p>
+              <p class="card-text">Step into the shadowy depths of the cave, where time stands still and eerie lava formations whisper the ancient secrets of Jeju’s volcanic past.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seongsan Ilchulbong -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="seongsan.jpeg" class="card-img-top" alt="Seongsan Ilchulbong" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Seongsan Ilchulbong</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Seogwipo-si, Jeju-do</p>
+              <p class="card-text">Climb through lush trails and sea-kissed breezes, leading to panoramic views from the crater rim that make it one of Jeju’s most unforgettable sunrise spots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>More Things to Do in Jeju</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Visit Jeongbang Waterfall</div>
+        <p>The only waterfall in Korea that flows directly into the sea.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">2. Walk Olle Trails</div>
+        <p>Jeju's famous coastal trails with breathtaking scenery and stone fences.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">3. Try Black Pork BBQ</div>
+        <p>Jeju’s signature pork grilled over charcoal — tender, juicy, and smoky.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">4. Visit the Teddy Bear Museum</div>
+        <p>Charming and fun for all ages — from historical teddy bears to quirky exhibits.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">5. Catch Women Divers in Action</div>
+        <p>Watch traditional “haenyeo” women divers harvest fresh seafood the old-fashioned way.</p>
+      </div>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <!-- Hotel 1 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="lottejeju-exterior.jpeg" class="hotel-exterior" alt="Lotte Hotel Jeju Exterior">
+            <img src="lottejeju-room.jpeg" class="hotel-room" alt="Lotte Hotel Jeju Room">
+          </div>
+          <h5 class="mt-3"><strong>Lotte Hotel Jeju</strong></h5>
+          <p class="price">MYR 900+ per night</p>
+          <p class="flex-grow-1">Luxury resort with ocean views, casino, and themed gardens near Jungmun Beach.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="rbest-exterior.jpeg" class="hotel-exterior" alt="Ramada Best Exterior">
+            <img src="rbest-room.jpeg" class="hotel-room" alt="Ramada Best Room">
+          </div>
+          <h5 class="mt-3"><strong>Ramada Plaza Jeju</strong></h5>
+          <p class="price">MYR 500+ per night</p>
+          <p class="flex-grow-1">Waterfront hotel with modern rooms and easy airport access.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="jejustay-exterior.jpeg" class="hotel-exterior" alt="Jeju Stay Hotel Exterior">
+            <img src="jejustay-room.jpeg" class="hotel-room" alt="Jeju Stay Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>Jeju Stay Hotel</strong></h5>
+          <p class="price">MYR 200+ per night</p>
+          <p class="flex-grow-1">Cozy and affordable lodging in Jeju City with easy access to markets and food streets.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-car"></i><b> Car Rental</b></h5>
+          <p>The most convenient way to explore the island at your own pace.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-bus"></i><b> Intercity Buses</b></h5>
+          <p>Budget-friendly and great for reaching major attractions like Seongsan and Hallasan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Korea Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

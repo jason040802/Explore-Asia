@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xi'an Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('xian1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="china.html">China Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Xi'an</h1>
+    <p>"Where Ancient Warriors Stand Guard"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"The birthplace of Chinese civilization"</em></p>
+      <p>Xi'an, the capital of Shaanxi Province, is one of China's oldest cities and the eastern terminus of the Silk Road. As the ancient capital for 13 dynasties including the Zhou, Qin, Han, and Tang, Xi'an is a living museum of China's glorious past.</p>
+      <p>The city is most famous for the Terracotta Warriors, but offers much more - from the perfectly preserved city walls to the Muslim Quarter's vibrant food scene. Xi'an represents the cradle of Chinese civilization while embracing its modern role as the cultural and economic center of Northwest China.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Xi'an</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="terracotta.jpg" class="card-img-top" alt="Terracotta Warriors" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Terracotta Army</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Lintong District (40 min from city)</p>
+              <p class="card-text">The 8,000 life-sized clay soldiers guarding Emperor Qin Shi Huang's tomb for 2,200 years.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="ancientwall.jpg" class="card-img-top" alt="Xi'an City Wall" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Ancient City Wall</strong></h5>
+              <p class="card-text"><strong>Location:</strong> City center</p>
+              <p class="card-text">The most complete city wall surviving in China, dating back to the Ming Dynasty.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="muslimstreet.jpg" class="card-img-top" alt="Muslim Quarter" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Muslim Quarter</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Behind Drum Tower</p>
+              <p class="card-text">Vibrant neighborhood with historic mosques and famous Xi'an street food.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Xi'an</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Marvel at the Terracotta Warriors</div>
+        <p>Discover the three excavation pits containing thousands of unique clay soldiers, horses, and chariots.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">2. Bike the Ancient City Walls</div>
+        <p>Rent bicycles to ride along the 14km Ming Dynasty wall encircling the old city.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">3. Explore the Muslim Quarter at night</div>
+        <p>Sample Xi'an's famous street food like yangrou paomo (crumbled bread in mutton soup).</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">4. Visit Shaanxi History Museum</div>
+        <p>See artifacts from Xi'an's 3,100 years of history, including Tang Dynasty treasures.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">5. See the Big Wild Goose Pagoda</div>
+        <p>Climb this Tang Dynasty pagoda built to house Buddhist scriptures from India.</p>
+      </div>
+    </div>
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="sheratonexterior.jpg" class="hotel-exterior" alt="Sheraton Xi'an Hotel Exterior">
+           <img src="sheratonroom.jpg" class="hotel-room" alt="Sheraton Xi'an Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>Sheraton Xi'an Hotel</strong></h5>
+         <p class="price">MYR 600+ per night</p>
+         <p class="flex-grow-1">Luxury hotel inside the ancient city walls with excellent facilities.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="sofitelexterior.jpg" class="hotel-exterior" alt="Sofitel Legend Exterior">
+           <img src="sofitelroom.jpg" class="hotel-room" alt="Sofitel Legend Room">
+         </div>
+         <h5 class="mt-3"><strong>Sofitel Legend Peoples Grand Hotel</strong></h5>
+         <p class="price">MYR 900+ per night</p>
+         <p class="flex-grow-1">Historic luxury hotel in a beautifully restored 1950s building.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="atourexterior.jpg" class="hotel-exterior" alt="Atour Hotel exterior">
+           <img src="atourroom.jpg" class="hotel-room" alt="Atour Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>Atour Hotel (Muslim Quarter)</strong></h5>
+         <p class="price">MYR 300+ per night</p>
+         <p class="flex-grow-1">Modern boutique hotel steps from the Muslim Quarter's food street.</p>
+       </div>
+     </div>
+   </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-subway"></i> Metro</strong></h5>
+          <p>Xi'an's metro system has 5 lines covering major attractions (MYR 2-5 per ride). Clean and efficient.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Taxi/Didi</strong></h5>
+          <p>Taxis are affordable but may not speak English. Have your destination written in Chinese.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-bus"></i> Tourist Bus</strong></h5>
+          <p>Special tourist buses (like Bus 306) go to Terracotta Warriors from the train station.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-bicycle"></i> Bike Rental</strong></h5>
+          <p>Rent bikes to ride the city walls or explore the Muslim Quarter's pedestrian streets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 China Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

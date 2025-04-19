@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Korea Travel Guide</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .hero {
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .overview-style {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hover effect for card text */
+    .card:hover .card-title,
+    .card:hover .card-text {
+      color: blue !important;
+    }
+
+    .food-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .weather-box {
+      background-color: #e6f1f8;
+      border-left: 5px solid #b3d4f5;
+      padding: 20px;
+      margin: 50px 0;
+      border-radius: 8px;
+    }
+
+    .footer-space {
+      margin-bottom: 40px;
+    }
+
+    .culture-img {
+      max-height: 100px;
+      width: auto;
+    }
+
+    a.card, a.card:hover, a.card:visited, a.card:active, a.card * {
+      color: #212529 !important;
+      text-decoration: none !important;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      color: #f39c12;
+    }
+
+    /* New style for back to home link */
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .back-to-home:hover {
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero" id="hero">
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+    </a>
+    <div class="text-center">
+      <h1 class="display-3 overview-style">South Korea</h1>
+      <h2>남한</h2>
+      <p class="lead">Where pop culture, tradition, and nature harmoniously collide.</p>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Discover South Korea</strong></h2>
+    <p class="text-center">South Korea is a vibrant destination known for its dynamic cities, rich history, and delicious cuisine. Whether exploring Seoul’s high-tech districts, ancient palaces, or hiking in the scenic mountains, Korea offers something special for every traveler.</p>
+    <div class="text-center">
+      <img src="koreaflag.jpeg" alt="Korea Flag" class="culture-img">
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Top Destinations</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="seoul.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="seoul.jpeg" class="card-img-top" alt="Seoul">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Seoul</h5>
+              <p class="card-text">The heart of South Korea, where tradition meets K-pop culture and modern skyscrapers.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="busan.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="busan.jpeg" class="card-img-top" alt="Busan">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Busan</h5>
+              <p class="card-text">Famous for its beaches, seafood, and colorful Gamcheon Culture Village.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="jeju.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="jeju.jpeg" class="card-img-top" alt="Jeju">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Jeju Island</h5>
+              <p class="card-text">A natural paradise with waterfalls, volcanic landscapes, and serene beaches.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Must-Try Food</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="kimchi.jpeg" alt="Kimchi" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Kimchi</h5>
+        <p>Spicy fermented vegetables, usually cabbage, that accompany almost every Korean meal.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="bibimbap.jpeg" alt="Bibimbap" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Bibimbap</h5>
+        <p>A colorful bowl of rice topped with assorted vegetables, meat, and a fried egg, mixed with gochujang sauce.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="tteokbokki.jpeg" alt="Tteokbokki" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Tteokbokki</h5>
+        <p>Chewy rice cakes cooked in a sweet and spicy red chili sauce, a beloved street food favorite.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Travel Video</strong></h2>
+    <div class="video-container">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KBCuJ_2wWPU" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="container my-5 footer-space">
+    <h2 class="section-title"><strong>Weather Tips</strong></h2>
+    <div class="weather-box">
+      <p><strong>🌸 Spring (March–May):</strong> Cherry blossoms line the streets and parks. Visit Gyeongbokgung Palace in Seoul for a breathtaking view.</p>
+      <p><strong>☀️ Summer (June–August):</strong> Hot and humid. Great time for beach trips to Busan and summer festivals like Boryeong Mud Festival.</p>
+      <p><strong>🍁 Autumn (September–November):</strong> Crisp air and vibrant foliage, especially in mountainous areas like Seoraksan.</p>
+      <p><strong>❄️ Winter (December–February):</strong> Cold and snowy—perfect for skiing or enjoying hot street food in traditional markets.</p>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 bg-dark text-white">
+    <p class="mt-3">Follow us on</p>
+    <div class="d-flex justify-content-center my-3">
+      <a href="https://www.facebook.com/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/lonelyplanet/" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Korea Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const heroImages = [
+      'korea.jpeg',
+      'korea1.jpeg',
+      'korea2.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const hero = document.getElementById('hero');
+
+    function swapHeroImage() {
+      hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+      currentIndex = (currentIndex + 1) % heroImages.length;
+    }
+
+    swapHeroImage();
+    setInterval(swapHeroImage, 4000);
+  </script>
+</body>
+</html>

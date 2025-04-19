@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cebu Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('cebu.jpg'); /* Replace with Cebu scenic image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-image-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-image-container img:first-child {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hotel-image-container img:last-child {
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:first-child {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:last-child {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="Philippines.html">Cebu Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Cebu</h1>
+    <p>"The Queen City of the South"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"A perfect mix of beach bliss and historical charm."</em></p>
+      <p>Cebu offers an incredible blend of white-sand beaches, vibrant city life, and deep cultural heritage. Whether you’re island hopping or exploring colonial churches, Cebu is your all-in-one tropical destination.</p>
+      <p>Swim with whale sharks, chase waterfalls, and enjoy world-class diving spots — all just a few hours away from the city center.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Cebu</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="kawasan.jpg" class="card-img-top" alt="Kawasan Falls" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Kawasan Falls</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Badian, South Cebu</p>
+              <p class="card-text">A majestic multi-tiered waterfall surrounded by lush jungle and turquoise pools.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="basilica.jpg" class="card-img-top" alt="Basilica del Santo Niño" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Basilica del Santo Niño</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Cebu City</p>
+              <p class="card-text">The oldest Roman Catholic church in the Philippines, home to a revered relic of the child Jesus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="oslob.jpg" class="card-img-top" alt="Oslob Whale Sharks" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Oslob Whale Shark</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Oslob</p>
+              <p class="card-text">Swim alongside the gentle giants of the sea in the warm waters off southern Cebu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Cebu</h5>
+      
+      <div class="activity-item">
+        <div class="activity-title">1. Island hop to Moalboal and Pescador</div>
+        <p>Snorkel in crystal waters, see sardine runs, or dive with turtles just off Cebu’s western coast.</p>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-title">2. Experience Canyoneering</div>
+        <p>Trek through rivers, jump off waterfalls, and slide down rocks.</p>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-title">3. Wacth the Sunset</div>
+        <p>Wheather on a mountain, beach, or rooftop, Cebuanos love a good sunset view.</p>
+      </div>
+    </div>
+
+    <!-- Entry Info -->
+    <div class="info-card">
+      <h5><i class="fas fa-info-circle mr-2"></i>Entry & Visitor Tips</h5>
+      <ul>
+        <li>Airport: Mactan-Cebu International Airport (MCIA) connects to major cities and islands.</li>
+        <li>Use sunscreen — especially when island hopping or visiting waterfalls.</li>
+        <li>Negotiate prices when riding tricycles or buying souvenirs in markets.</li>
+      </ul>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="shangrilacebu.jpg" class="card-img-top" alt="Shangri-La Mactan" />
+            <img src="shangrilaceburoom.jpg" class="hotel-room" alt="Shangri-La Room">
+          </div>
+          <h5 class="mt-3"><strong>Shangri-La Mactan</strong></h5>
+          <p class="price">PHP 12000+ per night</p>
+          <p class="flex-grow-1">A tropical paradise with private beach, pools, and luxury spa.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="questcebu.jpg" class="card-img-top" alt="Quest Hotel" />
+            <img src="questroom.jpg" class="hotel-room" alt="Quest Room">
+          </div>
+          <h5 class="mt-3"><strong>Quest Hotel</strong></h5>
+          <p class="price">PHP 3000+ per night</p>
+          <p class="flex-grow-1">Great value hotel in Cebu City, close to malls and food spots.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="baihotel.jpg" class="card-img-top" alt="Bai Hotel" />
+            <img src="bairoom.jpg" class="hotel-room" alt="Bai Room">
+          </div>
+          <h5 class="mt-3"><strong>Bai Hotel Cebu</strong></h5>
+          <p class="price">PHP 5000+ per night</p>
+          <p class="flex-grow-1">Modern, high-rise hotel with rooftop views and great amenities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-car"></i> Car & Van Rentals</h5>
+          <p>Great for exploring spots outside the city like Badian or Dalaguete at your own pace.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-bus"></i> MyBus</h5>
+          <p>Affordable public buses connecting airport, malls, and Cebu IT Park.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-taxi"></i> Grab & Taxis</h5>
+          <p>Widely available in the city and best for quick trips within Cebu proper.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-motorcycle"></i> Habal-habal (Motorbike Taxi)</h5>
+          <p>Used in mountain areas — thrilling but be cautious and wear helmets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Cebu Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

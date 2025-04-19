@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manila Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('manila.jpg'); /* Replace with a real Manila image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-image-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-image-container img:first-child {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hotel-image-container img:last-child {
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:first-child {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:last-child {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="Philippines.html">Manila Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Manila</h1>
+    <p>"The Historical Soul of the Philippines"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where heritage meets modernity."</em></p>
+      <p>Manila, the bustling capital of the Philippines, blends rich Spanish colonial heritage with a vibrant urban culture. From historic walled cities to vibrant street life, it offers a unique Southeast Asian experience.</p>
+      <p>Whether you’re exploring old churches, strolling by Manila Bay, or diving into the thriving food scene, this city is full of surprises.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Manila</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="intramuros.jpg" class="card-img-top" alt="Intramuros" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Intramuros</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Old Manila</p>
+              <p class="card-text">The historic Spanish-era walled city featuring Fort Santiago and centuries-old churches.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="rizalpark.jpg" class="card-img-top" alt="Rizal Park" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Rizal Park</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Roxas Boulevard</p>
+              <p class="card-text">A large historical park dedicated to national hero José Rizal. A great place for walks and cultural displays.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="manilaocean.jpg" class="card-img-top" alt="Manila Ocean Park" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Manila Ocean Park</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Near Rizal Park</p>
+              <p class="card-text">A marine-themed park with aquariums, ocean tunnels, and sea lion shows — fun for all ages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Manila</h5>
+      
+      <div class="activity-item">
+        <div class="activity-title">1. Sunset walk by Manila Bay</div>
+        <p>Take in a gorgeous tropical sunset from the Baywalk area, followed by street snacks or a chilled coconut drink.</p>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-title">2. Shop and dine at Mall of Asia</div>
+        <p>One of the largest malls in Asia — enjoy shopping, watch 4D movies, and try Filipino dishes at seaside restaurants.</p>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-title">3. Ride a jeepney</div>
+        <p>Hop on a colorful jeepney — the classic Filipino mode of transport — for a fun and cheap ride around town.</p>
+      </div>
+    </div>
+
+    <!-- Entry Info -->
+    <div class="info-card">
+      <h5><i class="fas fa-info-circle mr-2"></i>Entry & Visitor Tips</h5>
+      <ul>
+        <li>Respect cultural norms, especially in historic or religious areas like churches and monuments.</li>
+        <li>Carry cash for small purchases — many local vendors don’t accept cards.</li>
+        <li>Use Grab app for safe, air-conditioned transportation.</li>
+        <li>Watch out for rush hour traffic — plan trips accordingly!</li>
+      </ul>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="sofitel.jpg" class="card-img-top" alt="Sofitel Manila" />
+            <img src="sofitelroom.jpg" class="hotel-room" alt="Sofitel Manila Room">
+          </div>
+          <h5 class="mt-3"><strong>Sofitel Philippine Plaza</strong></h5>
+          <p class="price">PHP 9000+ per night</p>
+          <p class="flex-grow-1">Luxury by the bay with amazing pool and sunset views.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="okada.jpg" class="card-img-top" alt="Okada Manila" />
+            <img src="okadaroom.jpg" class="hotel-room" alt="Okada Manila Room">
+          </div>
+          <h5 class="mt-3"><strong>Okada Manila</strong></h5>
+          <p class="price">PHP 14000+ per night</p>
+          <p class="flex-grow-1">5-star integrated resort with casino, dining, and spas.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="thepen.jpg" class="card-img-top" alt="The Peninsula Manila" />
+            <img src="thepenroom.jpg" class="hotel-room" alt="The Peninsula Room">
+          </div>
+          <h5 class="mt-3"><strong>The Peninsula Manila</strong></h5>
+          <p class="price">PHP 8000+ per night</p>
+          <p class="flex-grow-1">Classic elegance in the heart of Makati business district.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-train"></i> LRT & MRT</h5>
+          <p>Efficient rail lines connecting Manila's key areas, avoid during peak hours.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-taxi"></i> Grab & Taxis</h5>
+          <p>Grab is the safest and easiest way to get around the city.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-bus"></i> Buses & P2P</h5>
+          <p>Point-to-Point (P2P) buses offer comfy air-conditioned rides to popular malls and airports.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-car"></i> Car Rentals</h5>
+          <p>Available via apps or hotels — great for day trips to nearby Tagaytay or Batangas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Manila Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietnam Travel Guide</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .hero {
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .overview-style {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      height: 100%;
+      color: black !important; /* Default text color black */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover .card-title,
+    .card:hover .card-text {
+      color: blue !important; /* Hover color: Bootstrap blue */
+    }
+
+    .food-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .weather-box {
+      background-color: #f3f7cc;
+      border-left: 5px solid #f2ec8e;
+      padding: 20px;
+      margin: 50px 0;
+      border-radius: 8px;
+    }
+
+    .footer-space {
+      margin-bottom: 40px;
+    }
+
+    .culture-img {
+      max-height: 100px;
+      width: auto;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    a.card,
+    a.card:hover,
+    a.card:visited,
+    a.card:active,
+    a.card * {
+      color: black !important;
+      text-decoration: none !important;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      color: #f39c12;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-home:hover {
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero" id="hero">
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+    </a>
+    <div class="text-center">
+      <h1 class="display-3 overview-style">Vietnam</h1>
+      <p class="lead">Explore the colors, culture, and coastlines of enchanting Vietnam!</p>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Discover Vietnam</strong></h2>
+    <p class="text-center">From emerald rice terraces in the north to sun-kissed beaches in the south, Vietnam invites you on a journey filled with rich history, vibrant culture, and irresistible street food.</p>
+    <div class="text-center">
+      <img src="flag2.jpeg" alt="Cultural illustration" class="culture-img">
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Top Destinations</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="hanoi.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="hanoi.jpeg" class="card-img-top" alt="Hanoi">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Hanoi</h5>
+              <p class="card-text">Wander through the Old Quarter's narrow alleys brimming with history, scooters, and delicious pho.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="danang.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="danang.jpeg" class="card-img-top" alt="Da Nang">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Da Nang</h5>
+              <p class="card-text">Bask in the coastal breeze as you explore Da Nang's golden beaches, dragon bridges, and vibrant blend of modern city life and ancient temples.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="làocai.html" class="text-decoration-none w-100">
+          <div class="card">
+            <img src="laocai.jpeg" class="card-img-top" alt="Lào Cai">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Lào Cai</h5>
+              <p class="card-text">Nestled in the misty northern highlands, Lào Cai is your gateway to Sapa's emerald rice terraces and rich ethnic heritage.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Must-Try Food</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="pho.jpeg" alt="Pho" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Pho</h5>
+        <p>Vietnam's beloved noodle soup—steaming hot with herbs, lime, and tender slices of beef or chicken.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="banhmi.jpeg" alt="Banh Mi" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Banh Mi</h5>
+        <p>A crusty French baguette filled with savory meats, pickled veggies, and fresh herbs—a Vietnamese street food classic.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="springroll.jpeg" alt="Spring Roll" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Spring Roll</h5>
+        <p>Light and refreshing rice paper rolls stuffed with shrimp, herbs, and vermicelli, served with tangy dipping sauce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Travel Video</strong></h2>
+    <div class="video-container">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ayxzlROT7NY" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="container my-5 footer-space">
+    <h2 class="section-title"><strong>Weather Tips</strong></h2>
+    <div class="weather-box">
+      <p><strong>🌦️ North Vietnam (Hanoi, Sapa):</strong> Four seasons—cool winters (Dec-Feb), hot summers (Jun-Aug), and mild spring. Bring layers if traveling in winter!</p>
+      <p><strong>🌧️ Central Vietnam (Da Nang, Hue):</strong> Rainy season hits from September to December. Dry and sunny from January to August—perfect for the beach.</p>
+      <p><strong>🌞 South Vietnam (Ho Chi Minh City, Phu Quoc):</strong> Hot and humid year-round. Dry season runs from December to April—great for outdoor adventures.</p>
+    </div>
+  </section>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <footer class="text-center p-4 bg-dark text-white">
+    <p class="mt-3">Follow us on</p>
+    <div class="d-flex justify-content-center my-3">
+      <!-- Social Media Icons -->
+      <a href="https://www.facebook.com/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/lonelyplanet/" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-youtube"></i>
+      </a>
+
+    </div>
+
+  <footer class="text-center p-4 bg-dark text-white">
+    <p>&copy; 2025 Vietnam Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const heroImages = [
+      'vietnam1.jpeg',
+      'vietnam2.jpeg',
+      'vietnam3.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const hero = document.getElementById('hero');
+
+    function swapHeroImage() {
+      hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+      currentIndex = (currentIndex + 1) % heroImages.length;
+    }
+
+    swapHeroImage();
+    setInterval(swapHeroImage, 4000);
+  </script>
+</body>
+
+</html>
+
+

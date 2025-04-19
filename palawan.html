@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palawan Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('palawan.jpg'); /* Replace with a scenic Palawan image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-image-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-image-container img:first-child {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hotel-image-container img:last-child {
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:first-child {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:last-child {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="Philippines.html">Palawan Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Palawan</h1>
+    <p>"Nature's Last Frontier"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"A paradise of crystal waters, hidden lagoons, and limestone cliffs."</em></p>
+      <p>Palawan is consistently ranked as one of the world’s best islands. From the stunning limestone karsts of El Nido to the Underground River of Puerto Princesa, every turn offers nature at its finest.</p>
+      <p>Perfect for nature lovers, divers, island-hoppers, and those looking to unwind in pristine tropical beauty.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Palawan</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="elnido.jpg" class="card-img-top" alt="El Nido" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>El Nido</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Northern Palawan</p>
+              <p class="card-text">Explore hidden lagoons, secret beaches, and dramatic cliffs by island-hopping tour.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="coron.jpg" class="card-img-top" alt="Coron" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Coron</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Northern Palawan</p>
+              <p class="card-text">Known for WWII shipwreck diving, Kayangan Lake, and pristine snorkeling reefs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="undergroundriver.jpg" class="card-img-top" alt="Underground River" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Underground River</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Puerto Princesa</p>
+              <p class="card-text">A UNESCO World Heritage Site — cruise through caves and marvel at rock formations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Palawan</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Go on an island-hopping tour</div>
+        <p>Visit Small Lagoon, Secret Beach, and Big Lagoon with guided boat tours.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">2. Snorkel or dive in Coron</div>
+        <p>Explore Japanese shipwrecks, coral gardens, and crystal-clear lakes.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">3. Paddle through the Underground River</div>
+        <p>A must-visit — drift through one of the longest navigable underground rivers in the world.</p>
+      </div>
+    </div>
+
+    <!-- Entry Info -->
+    <div class="info-card">
+      <h5><i class="fas fa-info-circle mr-2"></i>Entry & Visitor Tips</h5>
+      <ul>
+        <li>Fly into Puerto Princesa or direct to El Nido/Coron via regional flights.</li>
+        <li>Bring cash — many remote areas have limited ATM access.</li>
+        <li>Respect local marine life — no touching corals or feeding fish.</li>
+        <li>Travel light and waterproof — boat rides are part of the daily routine!</li>
+      </ul>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="elnidoresort.jpg" class="card-img-top" alt="El Nido Resorts" />
+            <img src="elnidoinside.jpg" class="hotel-room" alt="El Nido Room">
+          </div>
+          <h5 class="mt-3"><strong>El Nido Resorts</strong></h5>
+          <p class="price">PHP 15000+ per night</p>
+          <p class="flex-grow-1">Luxury eco-resorts with stunning island locations and environmental sustainability.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="coronwestown.jpg" class="card-img-top" alt="Coron Westown" />
+            <img src="coronroom.jpg" class="hotel-room" alt="Coron Room">
+          </div>
+          <h5 class="mt-3"><strong>Coron Westown Resort</strong></h5>
+          <p class="price">PHP 3500+ per night</p>
+          <p class="flex-grow-1">A great mid-range stay with a pool and mountain views in Coron town.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="puertoprincesa.jpg" class="card-img-top" alt="Hue Hotel" />
+            <img src="hueinside.jpg" class="hotel-room" alt="Hue Room">
+          </div>
+          <h5 class="mt-3"><strong>Hue Hotel Puerto Princesa</strong></h5>
+          <p class="price">PHP 3000+ per night</p>
+          <p class="flex-grow-1">Colorful, modern hotel near airport and local dining spots in Puerto Princesa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-ship"></i> Ferries</h5>
+          <p>Travel between El Nido and Coron via fast boats — book early!</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-car"></i> Vans & Shuttles</h5>
+          <p>Common transport between Puerto Princesa, El Nido, and Sabang (Underground River).</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-motorcycle"></i> Tricycles</h5>
+          <p>Best for short rides around town centers or beaches.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-plane"></i> Domestic Flights</h5>
+          <p>SkyJet, AirSwift, and Cebu Pacific connect major parts of Palawan quickly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Palawan Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

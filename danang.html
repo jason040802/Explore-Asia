@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Danang Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('danang1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(15, 11, 11, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="vietnam.html">Vietnam Travel</a>
+  </nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <h1>Da Nang</h1>
+    <p>"Where modern charm meets coastal serenity."</p>
+  </header>
+  
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"A city of golden beaches, soaring bridges, and spiritual wonders"</em></p>
+      <p>Da Nang, Vietnam's vibrant coastal city, is a harmonious blend of natural beauty and urban energy. Whether you're soaking in the sun on My Khe Beach or strolling along the famous Dragon Bridge, the city offers a refreshing escape with a modern twist.</p>
+      <p>Surrounded by cultural gems like the Marble Mountains and ancient Hội An nearby, Da Nang is a perfect base for adventure and relaxation. From beachside cafes to scenic mountain views, it's where nature and city life strike the perfect balance.</p>
+    </div>
+
+
+  
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Danang</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="goldenbridge.jpeg" class="card-img-top" alt="Golden Bridge (Bà Nà Hills)" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Golden Bridge (Bà Nà Hills)</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Hòa Vang</p>
+              <p class="card-text">Marvel at the iconic golden bridge held up by giant stone hands, high above the hills. Located within the Bà Nà Hills resort, it offers sweeping mountain views and a whimsical atmosphere you won't forget.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="lunacastle.jpeg" class="card-img-top" alt="Luna Castle" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Luna Castlet</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Hoa Vang district</p>
+              <p class="card-text">A whimsical European-style castle nestled in the Ba Na Hills area, Luna Castle blends fairy-tale charm with stunning mountain views. It’s part of the Sun World complex and perfect for magical photo ops, wandering cobbled streets, and enjoying charming cafés inside a fantasy-like setting.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="chualinhung.jpeg" class="card-img-top" alt="Linh Ứng Pagoda" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Linh Ứng Pagoda</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Sơn Trà</p>
+              <p class="card-text">The temple showcases traditional Northern Vietnamese Buddhist architecture and provides breathtaking views of the surrounding mountains and forests, making it a spiritual highlight of the Bà Nà Hills experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Things to Do -->
+<div class="info-card">
+    <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Da Nang</h5>
+  
+    <div class="activity-item">
+      <div class="activity-title">1. Walk the Golden Bridge at Bà Nà Hills</div>
+      <p>Marvel at the surreal "Hands of God" lifting this golden pedestrian bridge high above the clouds—one of Vietnam’s most iconic landmarks.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">2. Explore Luna Castle</div>
+      <p>Step into a fairy tale at Luna Castle in Sun World Ba Na Hills—complete with whimsical towers, vibrant gardens, and dazzling light shows.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">3. Visit Linh Ứng Pagoda (Sơn Trà)</div>
+      <p>Take in sweeping ocean views from this sacred hilltop pagoda, home to the towering 67-meter Lady Buddha statue overlooking the sea.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">4. Stroll along My Khe Beach</div>
+      <p>Relax on Da Nang's most famous stretch of sand—perfect for sunbathing, swimming, and watching local fishermen at work.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">5. Discover the Marble Mountains</div>
+      <p>Climb these mystical limestone hills dotted with caves, temples, and breathtaking viewpoints over Da Nang and the sea.</p>
+    </div>
+  </div>
+  
+  
+  <!-- Bonus: Grand World Phu Quoc -->
+  <div class="info-card mt-5">
+    <h5><i class="fas fa-star mr-2"></i>Bonus: Ride the Dragon Bridge at Night</h5>
+  
+    <div class="activity-item">
+      <div class="activity-title">🎡 Grand World Phu Quoc</div>
+      <p>Don't miss the spectacular weekend show when the Dragon Bridge comes to life—breathing fire and water while lighting up Da Nang's skyline!</p>
+    </div>
+  </div>
+  
+  
+
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel13a.jpeg" class="hotel-exterior" alt="Hyatt Regency Danang Exterior">
+           <img src="hotel13b.jpeg" class="hotel-room" alt="Hyatt Regency Danang Room">
+         </div>
+         <h5 class="mt-3"><strong>Hyatt Regency Danang Resort and Spa</strong></h5>
+         <p class="price">MYR 700+ per night</p>
+         <p class="flex-grow-1">Located along Non Nuoc Beach, this beachfront resort boasts spacious rooms, suites, and villas. Guests can enjoy multiple pools, a world-class spa, and easy access to the Marble Mountains. </p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel14a.jpeg" class="hotel-exterior" alt="InterContinental Danang Sun Peninsula Resort Exterior">
+           <img src="hotel14b.jpeg" class="hotel-room" alt="InterContinental Danang Sun Peninsula Resort Room">
+         </div>
+         <h5 class="mt-3"><strong>InterContinental Danang Sun Peninsula Resort</strong></h5>
+         <p class="price">MYR 2300+ per night</p>
+         <p class="flex-grow-1">Nestled on the Sơn Trà Peninsula, this award-winning resort offers opulent villas, private beaches, and panoramic ocean views</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel15a.jpeg" class="hotel-exterior" alt="Sheraton Grand Danang Resort & Convention Center Exteriorr">
+           <img src="hotel15b.jpeg" class="hotel-room" alt="Sheraton Grand Danang Resort & Convention Center Room">
+         </div>
+         <h5 class="mt-3"><strong> Sheraton Grand Danang Resort & Convention Center</strong></h5>
+         <p class="price">MYR 600+ per night</p>
+        <p class="flex-grow-1">This 5-star resort features a stunning infinity pool, elegant rooms, and diverse dining options. Its beachfront location makes it ideal for both leisure and business travelers.</p>
+       </div>
+     </div>
+   </div>
+
+<!-- Transportation -->
+<h2 class="section-title">Getting Around</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-car"></i><strong> Taxis & Grab</strong></h5>
+      <p>Taxis are reliable and easy to find, especially at the airport and tourist areas. Grab offers a convenient and affordable ride-hailing alternative with upfront pricing.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-motorcycle"></i><strong> Motorbike Rentals</strong></h5>
+      <p>Renting a motorbike is a popular way to explore Da Nang, especially for visiting attractions like the Marble Mountains and Son Tra Peninsula. Helmets are required by law.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-bus"></i><strong> Local Buses</strong></h5>
+      <p>Da Nang's bus system is modern and affordable, with routes connecting to Hoi An, the airport, and surrounding districts. Look for air-conditioned yellow buses.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-bicycle"></i><strong> Bicycles & Walking</strong></h5>
+      <p>Beachside paths and riverside promenades make cycling or walking enjoyable, especially in the early morning or late afternoon. Some hotels offer free bike rentals.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Danang Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

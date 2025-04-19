@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shanghai Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('shanghai1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }   
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="china.html">China Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Shanghai</h1>
+    <p>"The Paris of the East"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where futuristic skyscrapers meet historic shikumen"</em></p>
+      <p>Shanghai, China's largest city and global financial hub, is a dazzling metropolis where East meets West. The city's iconic skyline along the Huangpu River showcases its rapid development, while the historic Bund preserves its colonial past.</p>
+      <p>From the ultra-modern Pudong district to the traditional alleyways of the French Concession, Shanghai offers a fascinating blend of cultures, cuisines, and architectural styles. As China's most cosmopolitan city, it serves as a gateway between the country and the world.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Shanghai</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="thebund.jpg" class="card-img-top" alt="The Bund" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">The Bund</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Huangpu District</p>
+              <p class="card-text">Historic waterfront with colonial-era buildings facing Pudong's futuristic skyline.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="pudong.jpg" class="card-img-top" alt="Pudong Skyline" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Pudong Skyline</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Pudong District</p>
+              <p class="card-text">Futuristic district with Shanghai Tower, Oriental Pearl TV Tower, and Jin Mao Tower.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="yugarden.jpg" class="card-img-top" alt="Yu Garden" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Yu Garden</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Huangpu District</p>
+              <p class="card-text">Classical Ming Dynasty garden with pavilions, ponds, and the bustling bazaar outside.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Shanghai</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Walk along the Bund at night</div>
+        <p>See the spectacular light show of Pudong's skyscrapers reflected in the Huangpu River.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">2. Visit the observation deck of Shanghai Tower</div>
+        <p>At 632 meters, it's the world's second tallest building with breathtaking city views.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">3. Explore the French Concession</div>
+        <p>Wander tree-lined avenues, boutique shops, and historic shikumen (stone-gate) houses.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">4. Shop at Nanjing Road</div>
+        <p>One of the world's busiest shopping streets with both luxury brands and local shops.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">5. Experience Tianzifang</div>
+        <p>Labyrinth of artsy alleyways with galleries, cafes, and craft shops in converted shikumen houses.</p>
+      </div>
+    </div>
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="mandarinexterior.jpg" class="hotel-exterior" alt="Mandarin Oriental Pudong Shanghai Exterior">
+           <img src="mandarinroom.jpg" class="hotel-room" alt="Mandarin Oriental Pudong Shanghai Shanghai Room">
+         </div>
+         <h5 class="mt-3"><strong>Mandarin Oriental Pudong</strong></h5>
+         <p class="price">MYR 800+ per night</p>
+         <p class="flex-grow-1">Luxury hotel with stunning river views and exceptional service.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="puliexterior.jpg" class="hotel-exterior" alt="The Puli Hotel Exterior">
+           <img src="puliroom.jpg" class="hotel-room" alt="The Puli Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>The Puli Hotel & Spa</strong></h5>
+         <p class="price">MYR 1500+ per night</p>
+         <p class="flex-grow-1">Boutique luxury in Jing'an district with serene atmosphere.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="waterhouseexterior.jpg" class="hotel-exterior" alt="The Waterhouse at South Bund exterior">
+           <img src="waterhouseroom.jpg" class="hotel-room" alt="The Waterhouse at South Bund Room">
+         </div>
+         <h5 class="mt-3"><strong>The Waterhouse at South Bund</strong></h5>
+         <p class="price">MYR 800+ per night</p>
+         <p class="flex-grow-1">Industrial-chic boutique hotel in a converted 1930s warehouse.</p>
+       </div>
+     </div>
+   </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-subway"></i> Metro</strong></h5>
+          <p>Shanghai's metro is the world's largest by route length, clean and efficient (MYR 2-6 per ride). English signage throughout.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Taxi/Didi</strong></h5>
+          <p>Taxis are plentiful and affordable. Didi (Chinese Uber) works well with English app options.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-bicycle"></i> Bike Sharing</strong></h5>
+          <p>Extensive bike share network (Mobike, HelloBike) with dedicated lanes throughout the city.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-train"></i> Maglev Train</strong></h5>
+          <p>Experience 430km/h magnetic levitation train to Pudong Airport (MYR 50, 8 minutes).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 China Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

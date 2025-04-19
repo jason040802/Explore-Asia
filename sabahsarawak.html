@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabah & Sarawak</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('sabahsarawak.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-image-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-image-container img:first-child {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hotel-image-container img:last-child {
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:first-child {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-image-container img:last-child {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .sabah-section {
+      background-color: #e8f4ea; 
+      border-radius: 12px;
+      padding: 30px 20px;
+      margin-bottom: 40px;
+    }
+
+   .sarawak-section {
+      background-color: #fbffde; 
+      border-radius: 12px;
+      padding: 30px 20px;
+      margin-bottom: 40px;
+    }
+
+
+    .info-card {
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="Malaysia.html">Sabah & Sarawak Travel</a>
+    </nav>
+  
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Sabah & Sarawak</h1>
+    </header>
+  
+    <div class="container my-5">
+      <!-- Description -->
+      <div class="description">
+        <p>Sabah and Sarawak, located on Borneo Island, are known for their untamed jungles, indigenous culture, and rich biodiversity. These states offer adventure, nature, and cultural discovery in one package.</p>
+        <p>From Mount Kinabalu’s peak to Sarawak’s Mulu Caves and orangutan sanctuaries, these East Malaysian gems invite explorers and nature lovers alike.</p>
+      </div>
+  
+      <!-- Top Places to Visit in Sabah -->
+<section class="sabah-section">
+    <h2 class="section-title">Top Places to Visit in Sabah</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100 border-0 rounded-lg">
+          <img src="kinabalu.jpg" class="card-img-top" alt="Mount Kinabalu" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Mount Kinabalu</strong></h5>
+            <p class="card-text"><strong>Location:</strong> Kinabalu Park</p>
+            <p class="card-text">The tallest mountain in Malaysia, perfect for trekking and nature photography.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100 border-0 rounded-lg">
+          <img src="orangutan.jpg" class="card-img-top" alt="Sepilok Orangutan Centre" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Sepilok Orangutan Centre</strong></h5>
+            <p class="card-text"><strong>Location:</strong> Sandakan</p>
+            <p class="card-text">Observe rescued orangutans being rehabilitated in a natural forest habitat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100 border-0 rounded-lg">
+          <img src="sipadan.jpg" class="card-img-top" alt="Sipadan Island" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Sipadan Island</strong></h5>
+            <p class="card-text"><strong>Location:</strong> Celebes Sea</p>
+            <p class="card-text">World-famous diving site with vibrant coral reefs and marine life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Recommended Hotels in Sabah -->
+  <section class="sabah-section">
+    <h2 class="section-title">Recommended Hotels in Sabah</h2>
+    <div class="row">
+
+
+        <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="shangrila.jpg" class="card-img-top" alt="Shangri-La's Tanjung Aru" />
+                <img src="shangrilaroom.jpg" class="hotel-room" alt="Shangri-La's Tanjung Aru Room">
+              </div>
+              <h5 class="mt-3"><strong>Shangri-La's Tanjung Aru</strong></h5>
+              <p class="price">MYR 800+ per night</p>
+              <p class="flex-grow-1">Luxurious beachfront stay with sunset views in Kota Kinabalu.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="naturelodge.jpg" class="card-img-top" alt="Nature Lodge Kinabatangan" />
+                <img src="naturelodgeroom.jpg" class="hotel-room" alt="Nature Lodge Kinabatangan Room">
+              </div>
+              <h5 class="mt-3"><strong>Nature Lodge Kinabatangan</strong></h5>
+              <p class="price">MYR 250+ per night</p>
+              <p class="flex-grow-1">Eco-lodge offering wildlife tours in Sabah’s lush rainforest.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="sutera.jpg" class="card-img-top" alt="The Magellan Sutera Resort" />
+                <img src="suteraroom.jpg" class="hotel-room" alt="The Magellan Sutera Resort Room">
+              </div>
+              <h5 class="mt-3"><strong>The Magellan Sutera Resort</strong></h5>
+              <p class="price">MYR 600+ per night</p>
+              <p class="flex-grow-1">Premium seaside resort with pools, golf course, and marina.</p>
+            </div>
+          </div>
+    </section>
+
+    <div class="info-card">
+        <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Sabah</h5>
+      
+        <div class="activity-item">
+          <div class="activity-title">1. Soak in Poring Hot Springs</div>
+          <p>Unwind in the mineral-rich hot springs of Poring, surrounded by lush rainforest and near stunning canopy walkways.</p>
+        </div>
+      
+        <div class="activity-item">
+          <div class="activity-title">2. Snorkeling or Scuba Diving</div>
+          <p>Explore one of the world’s best diving spots with vibrant coral reefs, sea turtles, and swirling schools of barracuda in Sipadan Island.</p>
+        </div>
+      
+        <div class="activity-item">
+          <div class="activity-title">3. Take a Wildlife River Cruise</div>
+          <p>Hop on a boat along the Kinabatangan River to spot proboscis monkeys, pygmy elephants, crocodiles, and hornbills in their natural habitat.</p>
+        </div>
+      </div>
+
+    <br><br><br>
+  
+    <section class="sarawak-section">
+      <h2 class="section-title">Top Places to Visit in Sarawak</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="mulu.jpg" class="card-img-top" alt="Mulu Caves" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Mulu Caves</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Miri</p>
+              <p class="card-text">UNESCO World Heritage Site with some of the world’s largest cave systems.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="culturalvillage.jpg" class="card-img-top" alt="Sarawak Cultural Village" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Sarawak Cultural Village</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Pantai Damai</p>
+              <p class="card-text">Experience the traditions of Sarawak’s ethnic groups in a living museum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="bako.jpg" class="card-img-top" alt="Bako National Park" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Bako National Park</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Kuching</p>
+              <p class="card-text">Famous for proboscis monkeys, rainforest hikes, and beach trails.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  <!-- Recommended Hotels in Sarawak -->
+  <section class="sarawak-section">
+    <h2 class="section-title">Recommended Hotels in Sarawak</h2>
+     <div class="row">
+
+        <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="pullman.jpg" class="card-img-top" alt="Pullman Kuching" />
+                <img src="pullmanroom.jpg" class="hotel-room" alt="Pullman Kuching Room">
+              </div>
+              <h5 class="mt-3"><strong>Pullman Kuching</strong></h5>
+              <p class="price">MYR 400+ per night</p>
+              <p class="flex-grow-1">Modern city hotel close to Kuching’s riverfront and attractions.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="damai.jpg" class="card-img-top" alt="Damai Beach Resort" />
+                <img src="damairoom.jpg" class="hotel-room" alt="Damai Beach Resort Room">
+              </div>
+              <h5 class="mt-3"><strong>Damai Beach Resort</strong></h5>
+              <p class="price">MYR 350+ per night</p>
+              <p class="flex-grow-1">Beachfront retreat with views of Mount Santubong and rainforest walks.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="hotel-card w-100 d-flex flex-column">
+              <div class="hotel-image-container">
+                <img src="grandmargherita.jpg" class="card-img-top" alt="Grand Margherita Hotel" />
+                <img src="grandmargheritaroom.jpg" class="hotel-room" alt="Grand Margherita Hotel Room">
+              </div>
+              <h5 class="mt-3"><strong>Grand Margherita Hotel</strong></h5>
+              <p class="price">MYR 300+ per night</p>
+              <p class="flex-grow-1">Convenient stay near Kuching Waterfront with easy access to shops.</p>
+            </div>
+          </div>
+        </div>
+     </div>
+    </section>
+
+
+    <div class="container my-5">
+        <div class="info-card">
+            <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Sarawak</h5>
+            
+            <div class="activity-item">
+                <div class="activity-title">1. Go Caving and Spelunking</div>
+                <p>Challenge yourself with caving adventures through vast underground chambers and limestone tunnels deep in the Sarawak wilderness.</p>
+            </div>
+      
+            <div class="activity-item">
+              <div class="activity-title">2. Trek Through Dense Rainforests</div>
+              <p>Embark on guided jungle treks to witness rich biodiversity, from exotic flora to rare wildlife like hornbills and flying squirrels.</p>
+            </div>
+      
+            <div class="activity-item">
+              <div class="activity-title">3. Experience Indigenous Traditions</div>
+              <p>Take part in cultural activities such as traditional dance, bamboo cooking, and handicraft-making with Sarawak’s native communities.</p>
+            </div>
+          </div>
+      
+  
+    <!-- Travel Tips -->
+    <section class="mt-5">
+        <div class="info-card">
+          <h5><i class="fas fa-info-circle mr-2"></i>Travel Tips</h5>
+          <ul>
+            <li>Light clothing and insect repellent are must-haves for jungle adventures.</li>
+            <li>Respect local customs and tribal traditions when visiting rural areas.</li>
+            <li>Best time to visit is during the dry season (March to October).</li>
+            <li>Domestic flights between Sabah and Sarawak are common and convenient.</li>
+          </ul>
+        </div>
+    </section>
+  
+      <!-- Getting Around -->
+      <h2 class="section-title">Getting Around</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="transport-card">
+            <h5><i class="fas fa-plane"></i> Domestic Flights</h5>
+            <p>Best way to travel between Sabah and Sarawak and other Malaysian states.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="transport-card">
+            <h5><i class="fas fa-car"></i> Car Rentals & Tours</h5>
+            <p>Ideal for exploring remote areas, national parks, and cultural villages.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="transport-card">
+            <h5><i class="fas fa-bus"></i> Local Buses</h5>
+            <p>Affordable option for intercity travel within each state.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="transport-card">
+            <h5><i class="fas fa-ship"></i> River Boats</h5>
+            <p>Scenic way to access remote riverside communities and wildlife areas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="text-center">
+      <p>&copy; 2025 Sabah & Sarawak Travel Guide. All rights reserved.</p>
+    </footer>
+  
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

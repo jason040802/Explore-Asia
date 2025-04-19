@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangkok Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('bangkok.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(15, 11, 11, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="thailand.html">Thailand Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Bangkok</h1>
+    <p>"The Timeless Heart of Thailand's Vibrant Spirit."</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where golden temples meet urban energy"</em></p>
+      <p>Bangkok, Thailand's bustling capital, is a city where centuries of tradition blend seamlessly with modern life. Known for its vibrant street life and ornate temples, Bangkok is as much about quiet spirituality as it is about fast-paced city living. From the majestic Grand Palace and Wat Arun to sleek shopping malls and rooftop bars, it's a place of striking contrasts.</p>
+      <p>As the cultural and economic heart of Thailand, Bangkok offers a dynamic mix of the old and the new. Glide through peaceful canals, wander buzzing markets, and savor world-renowned street food—all while surrounded by a city that never stands still.</p>
+    </div>
+
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Bangkok</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="grandpalace.jpeg" class="card-img-top" alt="The Grand Palace" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">The Grand palace</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Phra Nakhon District</p>
+              <p class="card-text">A dazzling royal complex of golden spires and intricate temples, once home to Thai kings and sacred relics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="mbkcentre.jpeg" class="card-img-top" alt="MBK Centre" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Mahbunkhrong Center</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Pathum Wan District</p>
+              <p class="card-text">A bustling mega mall in Bangkok with endless shops, food stalls, and bargain deals under one roof.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="maeklong1.jpeg" class="card-img-top" alt="Mae Klong River Market" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Mae Klong River Market</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Samut Songkhram</p>
+              <p class="card-text">A lively market set on active train tracks, where vendors swiftly clear the way as trains pass through.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+<div class="info-card">
+  <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Bangkok</h5>
+  
+  <div class="activity-item">
+    <div class="activity-title">1. Visit the Grand Palace</div>
+    <p>Marvel at golden spires and intricate temples in Thailand's most iconic royal complex.</p>
+  </div>
+  
+  <div class="activity-item">
+    <div class="activity-title">2. Experience the Maeklong Railway Market</div>
+    <p>Watch in awe as vendors swiftly pack up their stalls when a train rolls right through the market.</p>
+  </div>
+  
+  <div class="activity-item">
+    <div class="activity-title">3. Shop and eat at MBK Centre</div>
+    <p>Discover eight floors of fashion, electronics, souvenirs, and delicious street food under one roof.</p>
+  </div>
+  
+  <div class="activity-item">
+    <div class="activity-title">4. Cruise along the Chao Phraya River</div>
+    <p>See Bangkok from the water, passing temples, markets, and local neighborhoods on a longtail boat.</p>
+  </div>
+  
+  <div class="activity-item">
+    <div class="activity-title">5. Explore Chatuchak Weekend Market</div>
+    <p>Get lost in one of the world's largest markets with thousands of stalls selling everything imaginable.</p>
+  </div>
+</div>
+
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel1a.jpeg" class="hotel-exterior" alt="Mandarin Oriental Exterior">
+           <img src="hotel1b.jpeg" class="hotel-room" alt="Mandarin Oriental Room">
+         </div>
+         <h5 class="mt-3"><strong>Mandarin Oriental</strong></h5>
+         <p class="price">MYR 2500+ per night</p>
+         <p class="flex-grow-1">Legendary riverside hotel offering timeless Thai charm and exceptional luxury on the banks of the Chao Phraya River.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel2a.jpeg" class="hotel-exterior" alt="Siam Kempinski Hotel Exterior">
+           <img src="hotel2b.jpeg" class="hotel-room" alt="Siam Kempinski Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>Siam Kempinski Hotel</strong></h5>
+         <p class="price">MYR 1200+ per night</p>
+         <p class="flex-grow-1">Five-star luxury resort-inspired haven in Bangkok.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel3a.jpeg" class="hotel-exterior" alt="Four Season Hotel Exteriorr">
+           <img src="hotel3b.jpeg" class="hotel-room" alt="Four Season Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>Four Season Hotel</strong></h5>
+         <p class="price">MYR 2500+ per night</p>
+         <p class="flex-grow-1">A riverside urban resort in the heart of Bangkok.</p>
+       </div>
+     </div>
+   </div>
+
+    <!-- Transportation -->
+<h2 class="section-title">Getting Around</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-subway"></i><strong> BTS/MRT</strong></h5>
+      <p>Bangkok's Skytrain (BTS) and underground (MRT) are clean, efficient, and affordable (THB 16–59 per ride), with signs in English.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-taxi"></i><strong> Taxi & Grab</strong></h5>
+      <p>Taxis are common and metered, but traffic can be heavy. Grab is a reliable ride-hailing app with English support.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-motorcycle"></i><strong> Tuk-Tuks & Motorbike Taxis</strong> </h5>
+      <p>Iconic tuk-tuks and speedy motorbike taxis are fun for short distances—negotiate fares before hopping on!</p>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-ship"></i><strong> Chao Phraya Express Boats</strong></h5>
+      <p>Great for sightseeing, these riverboats connect key attractions like the Grand Palace and Wat Arun.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Bangkok Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

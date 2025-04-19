@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Japan Travel Guide</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .hero {
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .overview-style {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hover effect for card text */
+    .card:hover .card-title,
+    .card:hover .card-text {
+      color: blue !important;
+    }
+
+    .food-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .weather-box {
+      background-color: #e6f1f8;
+      border-left: 5px solid #b3d4f5;
+      padding: 20px;
+      margin: 50px 0;
+      border-radius: 8px;
+    }
+
+    .footer-space {
+      margin-bottom: 40px;
+    }
+
+    .culture-img {
+      max-height: 100px;
+      width: auto;
+    }
+
+    a.card, a.card:hover, a.card:visited, a.card:active, a.card * {
+      color: #212529 !important;
+      text-decoration: none !important;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      color: #f39c12;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-home:hover {
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero" id="hero">
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+    </a>
+    <div class="text-center">
+      <h1 class="display-3 overview-style">Japan</h1>
+      <h2>にほん</h2>
+      <p class="lead">A land where timeless tradition meets cutting-edge innovation.</p>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Discover Japan</strong></h2>
+    <p class="text-center">Japan offers a captivating blend of ancient temples, futuristic cities, scenic landscapes, and rich cultural experiences. Whether you're hiking Mount Fuji, enjoying cherry blossoms, or diving into Tokyo's nightlife, there's something unforgettable for everyone.</p>
+    <div class="text-center">
+      <img src="japanflag.jpeg" alt="Japan Flag" class="culture-img">
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Top Destinations</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="tokyo.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="tokyo.jpeg" class="card-img-top" alt="Tokyo">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Tokyo</h5>
+              <p class="card-text">Experience the vibrant metropolis known for its blend of tradition and technology.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="osaka.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="osaka.jpeg" class="card-img-top" alt="Osaka">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Osaka</h5>
+              <p class="card-text">Famous for street food, Osaka Castle, and its lively Dotonbori district.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-4 d-flex">
+        <a href="kyoto.html" class="text-decoration-none w-100 card">
+          <div class="card">
+            <img src="kyoto.jpeg" class="card-img-top" alt="Kyoto">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Kyoto</h5>
+              <p class="card-text">Home to historic temples, bamboo forests, and the beautiful geisha district.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Must-Try Food</strong></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="sushi.jpeg" alt="Sushi" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Sushi</h5>
+        <p>Fresh slices of raw fish served over vinegared rice—Japan's most iconic dish.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="ramen.jpeg" alt="Ramen" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Ramen</h5>
+        <p>Flavorful noodle soup with rich broth, meat toppings, and soft-boiled eggs.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="takoyaki.jpeg" alt="Takoyaki" class="food-img">
+        <h5 class="mt-2 font-weight-bold">Takoyaki</h5>
+        <p>Delicious octopus-filled dough balls topped with savory sauce and bonito flakes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="section-title"><strong>Travel Video</strong></h2>
+    <div class="video-container">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hqn6eI0VckM" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="container my-5 footer-space">
+    <h2 class="section-title"><strong>Weather Tips</strong></h2>
+    <div class="weather-box">
+      <p><strong>🌸 Spring (March–May):</strong> Perfect for cherry blossoms (sakura), especially in parks and temples. Join Hanami (flower viewing) picnics under the blooms.</p>
+      <p><strong>☀️ Summer (June–August):</strong> Hot and humid, but lively with festivals! Stay cool and hydrated while enjoying Kyoto's iconic Gion Matsuri!</p>
+      <p><strong>🍁 Autumn (September–November):</strong> Cool weather and beautiful fall foliage. The colourful leaves in Kyoto make it perfect for scenic walks and hikes.</p>
+      <p><strong>❄️ Winter (December–February):</strong> Snowy in the north. Mount Fuji's snowy cap is stunning during this time. Ideal for ski trips and soaking in hot springs.</p>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 bg-dark text-white">
+    <p class="mt-3">Follow us on</p>
+    <div class="d-flex justify-content-center my-3">
+      <a href="https://www.facebook.com/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/lonelyplanet/" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@lonelyplanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/user/LonelyPlanet" target="_blank" class="text-white mx-3" style="font-size: 1.5rem; transition: transform 0.3s;">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Japan Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const heroImages = [
+      'japan.jpeg',
+      'japan1.jpeg',
+      'japan2.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const hero = document.getElementById('hero');
+
+    function swapHeroImage() {
+      hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+      currentIndex = (currentIndex + 1) % heroImages.length;
+    }
+
+    swapHeroImage();
+    setInterval(swapHeroImage, 4000);
+  </script>
+</body>
+</html>

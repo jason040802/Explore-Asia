@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hanoi Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('hanoi1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(15, 11, 11, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="vietnam.html">Vietnam Travel</a>
+  </nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <h1>Hanoi</h1>
+    <p>"A timeless city where heritage and hustle harmonize."</p>
+  </header>
+  
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where ancient temples echo beside buzzing motorbikes"</em></p>
+      <p>Hanoi, Vietnam's charming capital, is a city of poetic chaos, rich history, and irresistible street food. Wander the labyrinthine alleys of the Old Quarter, sip egg coffee by Hoan Kiem Lake, or admire the faded French colonial architecture that tells stories of a bygone era.</p>
+      <p>From tranquil temples and water puppet shows to the lively hum of markets and scooters, Hanoi is a sensory adventure that captures both the heart and soul. It's a perfect blend of tradition and transformation, waiting to be explored.</p>
+    </div>
+  
+  
+  
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Hanoi</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="stjoseph.jpeg" class="card-img-top" alt="St. Joseph Cathedral" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">St. Joseph Cathedral</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Hoàn Kiếm</p>
+              <p class="card-text">Admire the striking neo-Gothic façade of Hanoi’s oldest church, a serene landmark tucked in the city's bustle—perfect for photos, quiet reflection, and a coffee at nearby hidden cafés.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="train.jpeg" class="card-img-top" alt="Hanoi Train Street" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Hanoi Train Street</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Old Quarter</p>
+              <p class="card-text">Wander the maze-like lanes of the Old Quarter, where street vendors, colonial buildings, and buzzing scooters bring Hanoi's energy to life</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="grandworld.jpeg" class="card-img-top" alt="Grand World Phu Quoc" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Grand World Phu Quoc</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Kiên Giang</p>
+              <p class="card-text">Step into a vibrant wonderland of canals, light shows, and themed villages at Grand World—Phu Quoc’s 24/7 entertainment complex that never sleeps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Things to Do -->
+<div class="info-card">
+    <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Hanoi</h5>
+  
+    <div class="activity-item">
+      <div class="activity-title">1. Explore the Old Quarter & Train Street</div>
+      <p>Get lost in the vibrant streets of Hanoi's Old Quarter and experience the thrill of sipping coffee just inches from a passing train.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">2. Visit St. Joseph's Cathedral</div>
+      <p>Marvel at the stunning neo-Gothic architecture of Hanoi's oldest church, a peaceful spot nestled among charming cafés.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">3. Discover Hoan Kiem Lake & Ngoc Son Temple</div>
+      <p>Stroll around the scenic lake and cross the iconic red bridge to visit the historic temple set on a small island.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">4. Tour the Ho Chi Minh Mausoleum</div>
+      <p>Pay your respects at this monumental site dedicated to Vietnam's most iconic leader, surrounded by serene gardens and flags.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">5. Experience Water Puppet Theater</div>
+      <p>Catch a traditional water puppet show, a cultural performance unique to northern Vietnam with music and folk tales.</p>
+    </div>
+  </div>
+  
+  <!-- Bonus: Grand World Phu Quoc -->
+  <div class="info-card mt-5">
+    <h5><i class="fas fa-star mr-2"></i>Bonus: Must-See in Phu Quoc</h5>
+  
+    <div class="activity-item">
+      <div class="activity-title">🎡 Grand World Phu Quoc</div>
+      <p>Step into a dazzling world of Venetian canals, colorful architecture, and nightly light shows at Vietnam's top entertainment complex.</p>
+    </div>
+  </div>
+  
+  
+
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel10a.jpeg" class="hotel-exterior" alt="Sofitel Legend Metropole Exterior">
+           <img src="hotel10b.jpeg" class="hotel-room" alt="Sofitel Legend Metropole Room">
+         </div>
+         <h5 class="mt-3"><strong>Sofitel Legend Metropole</strong></h5>
+         <p class="price">MYR 1000+ per night</p>
+         <p class="flex-grow-1">A luxurious colonial-era hotel in the heart of Hanoi, known for its timeless elegance, historic charm, and impeccable service—perfect for those seeking a 5-star heritage experience. </p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel11a.jpeg" class="hotel-exterior" alt="La Sinfonía del Rey Hotel Exterior">
+           <img src="hotel11b.jpeg" class="hotel-room" alt="La Sinfonía del Rey Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>La Sinfonía del Rey Hote</strong></h5>
+         <p class="price">MYR 400+ per night</p>
+         <p class="flex-grow-1">A stylish boutique hotel steps from Hoan Kiem Lake, offering elegant rooms, a rooftop bar with city views, and a relaxing spa—ideal for couples and solo travelers.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel12a.jpeg" class="hotel-exterior" alt=" Hanoi La Siesta Hotel Trendy Exteriorr">
+           <img src="hotel12b.jpeg" class="hotel-room" alt=" Hanoi La Siesta Hotel Trendy Room">
+         </div>
+         <h5 class="mt-3"><strong> Hanoi La Siesta Hotel Trendy</strong></h5>
+         <p class="price">MYR 500+ per night</p>
+        <p class="flex-grow-1">Located near the Old Quarter, this modern hotel features chic design, excellent service, and a cozy ambiance that blends local warmth with urban comfort.</p>
+       </div>
+     </div>
+   </div>
+
+<!-- Transportation -->
+<h2 class="section-title">Getting Around</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-car"></i><strong> Taxis & Grab</strong></h5>
+      <p>Taxis are widely available, but Grab is often preferred for convenience and transparent pricing. Always ensure the meter is on if using a local taxi.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-motorcycle"></i><strong> Motorbike Taxis</strong></h5>
+      <p>For quick trips through traffic, motorbike taxis (xe ôm) or GrabBike are fast and affordable options—helmets are provided.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-bus"></i><strong> Local Buses</strong></h5>
+      <p>Hanoi's public buses are cheap and extensive. Routes are numbered and most stops have signs in Vietnamese—great for budget travelers.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-walking"></i><strong> Walking & Cycling</strong></h5>
+      <p>In the Old Quarter, walking or renting a bicycle is the best way to explore narrow alleys, cafes, and cultural landmarks up close.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Hanoi Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

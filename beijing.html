@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beijing Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('beijing1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="china.html">China Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Beijing</h1>
+    <p>"The Ancient Capital of Modern China"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where ancient dynasties meet modern marvels"</em></p>
+      <p>Beijing, China's sprawling capital, has history stretching back 3 millennia. Yet it's known as much for its modern architecture as its ancient sites. From the sprawling Forbidden City complex and Temple of Heaven to the contemporary curves of the National Stadium and CCTV Headquarters, Beijing is a city of dramatic contrasts.</p>
+      <p>As the political and cultural heart of China, Beijing offers visitors an unparalleled look at both imperial history and the nation's rapid modernization. The city's famous hutongs (narrow alleys) reveal traditional courtyard life, while its gleaming skyscrapers showcase China's economic rise.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Beijing</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="forbidden.jpg" class="card-img-top" alt="Forbidden City" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Forbidden City</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Dongcheng District</p>
+              <p class="card-text">The world's largest palace complex with 980 buildings from Ming and Qing dynasties.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="thegreatwall.jpg" class="card-img-top" alt="Great Wall" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Great Wall</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Mutianyu (90 min from city)</p>
+              <p class="card-text">Best-preserved section with stunning mountain views and fewer crowds.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="templeofheaven.jpg" class="card-img-top" alt="Temple of Heaven" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Temple of Heaven</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Dongcheng District</p>
+              <p class="card-text">Imperial complex where emperors prayed for good harvests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Beijing</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Walk through the Forbidden City</div>
+        <p>Explore the vast imperial palace that was off-limits for 500 years, home to 24 emperors.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">2. Hike the Great Wall at Mutianyu</div>
+        <p>Less crowded than Badaling, this restored section offers cable cars and toboggan rides down.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">3. Watch locals practice tai chi in Temple of Heaven Park</div>
+        <p>Morning is best to see retirees dancing, exercising, and playing traditional instruments.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">4. Explore the hutongs by rickshaw</div>
+        <p>Wander narrow alleyways to see traditional courtyard homes and local life.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">5. Visit the Summer Palace</div>
+        <p>Imperial retreat with Kunming Lake, Long Corridor, and Marble Boat.</p>
+      </div>
+    </div>
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="amanexterior.jpg" class="hotel-exterior" alt="Aman at Summer Palace Exterior">
+           <img src="amanroom.jpg" class="hotel-room" alt="Aman at Summer Palace Room">
+         </div>
+         <h5 class="mt-3"><strong>Aman at Summer Palace</strong></h5>
+         <p class="price">MYR 3500+ per night</p>
+         <p class="flex-grow-1">Luxury resort with private access to Summer Palace grounds.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="peninsulaexterior.jpg" class="hotel-exterior" alt="The Peninsula Beijing Exterior">
+           <img src="peninsularoom.jpg" class="hotel-room" alt="The Peninsula Beijing Room">
+         </div>
+         <h5 class="mt-3"><strong>The Peninsula Beijing</strong></h5>
+         <p class="price">MYR 1200+ per night</p>
+         <p class="flex-grow-1">Five-star luxury near Forbidden City with rooftop bar.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="xinxiangexterior.jpg" class="hotel-exterior" alt="Xinxiang Yayuan Beijing Sihe Courtyard exterior">
+           <img src="xinxiangroom.jpg" class="hotel-room" alt="Xinxiang Yayuan Beijing Sihe Courtyard Room">
+         </div>
+         <h5 class="mt-3"><strong>Xinxiang Yayuan Beijing Sihe Courtyard</strong></h5>
+         <p class="price">MYR 1100+ per night</p>
+         <p class="flex-grow-1">Boutique hutong hotel blending traditional and modern design.</p>
+       </div>
+     </div>
+   </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Metro</strong></h5>
+          <p>Beijing's extensive subway system is clean, efficient and cheap (MYR 2-5 per ride). Signs and announcements are in English.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Taxi/Didi</strong></h5>
+          <p>Taxis are affordable but language can be a barrier. Didi (Chinese Uber) has English app options.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Bike Sharing</strong></h5>
+          <p>Mobike & Ofo bikes are everywhere. Scan QR codes to unlock (need Chinese payment apps).</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-taxi"></i> Aiport Express</strong></h5>
+          <p>Dedicated train line connects to city center in 20 minutes (MYR 15).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 China Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

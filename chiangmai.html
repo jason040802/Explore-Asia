@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chiang Mai Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('chiangmai.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(15, 11, 11, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="thailand.html">Thailand Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Chiang Mai</h1>
+    <p>"The Cultural Soul of Northern Thailand."</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"Where ancient temples rise amid misty mountains"</em></p>
+      <p>Chiang Mai, the cultural capital of northern Thailand, blends serene landscapes with centuries-old traditions. Surrounded by forested hills and dotted with over 300 temples, the city offers a peaceful retreat with a strong spiritual charm.</p>
+      <p>Whether you're exploring the historic Old City, joining a lantern festival, or sipping coffee in a jungle café, Chiang Mai invites visitors to slow down and connect with its gentle pace and rich heritage.</p>
+    </div>
+  
+  
+
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Chiang Mai</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="buathong.jpeg" class="card-img-top" alt="Bua Thong Waterfall" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Bua Thong Waterfall</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Mae Taeng District</p>
+              <p class="card-text">A hidden natural wonder, where mineral-rich waters flow over grippy limestone rocks, letting you walk effortlessly up its cascading, jungle-framed tiers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="lantern.jpeg" class="card-img-top" alt="Yi Peng Lantern Festival" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Yi Peng Lantern Festival</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Mae On District</p>
+              <p class="card-text">In the heart of Chiang Mai, the Lantern Festival paints the night sky with floating stars, as whispered wishes rise like glowing prayers into the heavens.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="khunwang.jpeg" class="card-img-top" alt="Khun Wang Tunnel" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <strong><h5 class="card-title">Khun Wang Tunnel</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Mae Wang District</p>
+              <p class="card-text">A serene mountain haeven, where vibrant cherry blossoms and cool breezes weave through pine-covered hills and tranquil orchards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Things to Do -->
+<div class="info-card">
+    <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Chiang Mai</h5>
+    
+    <div class="activity-item">
+      <div class="activity-title">1. Experience the Lantern Festival (Yi Peng)</div>
+      <p>Witness thousands of glowing lanterns float into the night sky, creating a breathtaking tapestry of light and hope.</p>
+    </div>
+    
+    <div class="activity-item">
+      <div class="activity-title">2. Visit Khun Wang Royal Project</div>
+      <p>Stroll through blooming cherry blossom trees and lush highland farms nestled in the cool, scenic mountains of Chiang Mai.</p>
+    </div>
+    
+    <div class="activity-item">
+      <div class="activity-title">3. Climb Bua Thong Waterfall (Sticky Waterfall)</div>
+      <p>Defy gravity as you walk barefoot up the mineral-rich limestone tiers of this unique, non-slippery waterfall deep in the forest.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">4. Explore Doi Suthep Temple</div>
+      <p>Climb the staircase lined with mythical serpents to reach this sacred temple offering sweeping views over Chiang Mai.</p>
+    </div>
+  
+    <div class="activity-item">
+      <div class="activity-title">5. Wander through the Old City</div>
+      <p>Discover ancient temples, quaint cafés, and centuries-old walls as you wander the charming streets of Chiang Mai’s historic core.</p>
+    </div>
+  </div>
+  
+
+
+   <!-- Hotels -->
+   <h2 class="section-title">Recommended Hotels</h2>
+   <div class="row">
+     <!-- Hotel 1 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel7a.jpeg" class="hotel-exterior" alt="137 Pillars House Exterior">
+           <img src="hotel7b.jpeg" class="hotel-room" alt="137 Pillars House Room">
+         </div>
+         <h5 class="mt-3"><strong>137 Pillars House</strong></h5>
+         <p class="price">MYR 2500+ per night</p>
+         <p class="flex-grow-1">Perfect for a peaceful escape close to the city.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 2 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel8a.jpeg" class="hotel-exterior" alt="Tamarind Village Exterior">
+           <img src="hotel8b.jpeg" class="hotel-room" alt="Tamarind Village Room">
+         </div>
+         <h5 class="mt-3"><strong>Tamarind Village</strong></h5>
+         <p class="price">MYR 700+ per night</p>
+         <p class="flex-grow-1">Set in the heart of the Old City, great for exploring temples, walking streets, and soaking in Chiang Mai's heritage.</p>
+       </div>
+     </div>
+
+     <!-- Hotel 3 -->
+     <div class="col-md-4 d-flex">
+       <div class="hotel-card w-100 d-flex flex-column">
+         <div class="hotel-image-container">
+           <img src="hotel9a.jpeg" class="hotel-exterior" alt="Shangri-La Hotel Exteriorr">
+           <img src="hotel9b.jpeg" class="hotel-room" alt="Shangri-La Hotel Room">
+         </div>
+         <h5 class="mt-3"><strong>Shangri-La Hotel</strong></h5>
+         <p class="price">MYR 600+ per night</p>
+         <p class="flex-grow-1">Located in the heart of Chiang Mai and surrounded by stunning vistas of Northern Thailand’s mountain ranges. </p>
+       </div>
+     </div>
+   </div>
+
+<!-- Transportation -->
+<h2 class="section-title">Getting Around</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-car-side"></i><strong> Songthaews (Red Trucks)</strong></h5>
+      <p>Chiang Mai's iconic red shared taxis follow flexible routes and are an affordable way to get around—just flag one down and tell the driver your destination.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-mobile-alt"></i><strong> Grab</strong></h5>
+      <p>Grab is widely used in Chiang Mai and offers convenient, app-based rides with clear pricing and English language support.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-biking"></i><strong> Bicycles & Scooters</strong></h5>
+      <p>Renting a bicycle or scooter is a popular way to explore the city and its surroundings—just be cautious in traffic and always wear a helmet.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="transport-card">
+      <h5><i class="fas fa-walking"></i><strong> Walking</strong></h5>
+      <p>The Old City is compact and pedestrian-friendly, with temples, cafés, and shops all within walking distance.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Chiang Mai Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

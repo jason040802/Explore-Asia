@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Osaka Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('osaka1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="japan.html">Japan Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Osaka</h1>
+    <p>大阪</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+        <p class="osaka-quote">
+          <h2><em>"Osaka is not just a city; it’s a culinary adventure waiting to be savored."</em></h2> — <span class="quote-author"><b>Anthony Bourdain</b> (USA chef and travel documentarian)</span>
+        </p>      
+        <p>Osaka is Japan’s kitchen — a vibrant, friendly city filled with street food, bustling markets, and cheerful locals. It’s a place where neon lights reflect off canals and historic castles share space with modern attractions.</p>
+        <p>Whether you're wandering through Dotonbori’s glowing streets or visiting ancient temples, Osaka invites you to explore with curiosity and an empty stomach.</p>
+      </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Osaka</h2>
+      <div class="row">
+        <!-- Osaka Castle -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="osaka-castle.jpeg" class="card-img-top" alt="Osaka Castle" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Osaka Castle</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Chuo Ward, Osaka</p>
+              <p class="card-text">A testament to Japan’s feudal history, once served as the stronghold of warlord Toyotomi Hideyoshi and remains a powerful symbol of Japan’s samurai legacy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dotonbori -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="dotonbori.jpeg" class="card-img-top" alt="Dotonbori" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Dotonbori</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Namba, Osaka</p>
+              <p class="card-text">A food lover’s paradise, famous for its sizzling takoyaki, savory okonomiyaki, and endless street eats that capture the bold flavors of Osaka.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Universal Studios Japan -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="usj.jpeg" class="card-img-top" alt="Universal Studios Japan" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Universal Studios Japan</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Konohana Ward, Osaka</p>
+              <p class="card-text">USJ delivers non-stop excitement, with The Wizarding World of Harry Potter casting spells through thrilling rides, wand shops, and the towering magic of Hogwarts itself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>More Things to Do in Osaka</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Visit Kuromon Ichiba Market</div>
+        <p>Try takoyaki, fresh sushi, and local sweets in this bustling food market.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">2. Explore Shinsekai & Tsutenkaku Tower</div>
+        <p>Old-school vibes, local eateries, and panoramic city views await you.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">3. Relax in Spa World</div>
+        <p>A multi-themed hot spring complex — a perfect way to unwind.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">4. Discover Sumiyoshi Taisha Shrine</div>
+        <p>One of Japan's oldest shrines with distinctive architecture and a peaceful atmosphere.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">5. Enjoy a river cruise</div>
+        <p>See Osaka from the water, especially beautiful when lit up at night.</p>
+      </div>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <!-- Hotel 1 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="stregis-osaka-exterior.jpeg" class="hotel-exterior" alt="St. Regis Osaka Exterior">
+            <img src="stregis-osaka-room.jpeg" class="hotel-room" alt="St. Regis Osaka Room">
+          </div>
+          <h5 class="mt-3"><strong>St. Regis Osaka</strong></h5>
+          <p class="price">MYR 1800+ per night</p>
+          <p class="flex-grow-1">Elegant luxury on Midosuji Avenue with personalized butler service.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="candeo-hotel-exterior.jpeg" class="hotel-exterior" alt="Candeo Hotel Exterior">
+            <img src="candeo-hotel-room.jpeg" class="hotel-room" alt="Candeo Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>Candeo Hotels Osaka Namba</strong></h5>
+          <p class="price">MYR 960+ per night</p>
+          <p class="flex-grow-1">This vibrant hotel offers modern rooms with city views, a rooftop SkySpa, and a prime location near Dotonbori and Shinsaibashi.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="universalport-hotel-exterior.jpeg" class="hotel-exterior" alt="Universal Port Hotel Exterior">
+            <img src="universalport-hotel-room.jpeg" class="hotel-room" alt="Universal Port Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>Hotel Universal Port</strong></h5>
+          <p class="price">MYR 560+ per night</p>
+          <p class="flex-grow-1">A family-friendly hotel offering spacious rooms and a playful, movie-themed atmosphere.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-subway"></i><b> Metro & JR Lines</b></h5>
+          <p>Reliable and easy to navigate. The Osaka Amazing Pass is great for tourists.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-taxi"></i><b> Taxi</b></h5>
+          <p>Clean and convenient, but try to avoid rush hour to save time and cost.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-bicycle"></i><b> Bike Rentals</b></h5>
+          <p>Explore Osaka Castle Park and Nakanoshima by bike — scenic and relaxed.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-plane"></i><b> Kansai Airport Express</b></h5>
+          <p>Direct trains and buses connect you smoothly to the city center.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Japan Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

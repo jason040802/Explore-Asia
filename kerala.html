@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kerala Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('kerala.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+
+    .hotel-exterior {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hotel-room {
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .hotel-card:hover .hotel-exterior {
+      opacity: 0;
+    }
+
+    .hotel-card:hover .hotel-room {
+      opacity: 1;
+    }
+
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="india.html">India Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Kerala</h1>
+    <p>"God's Own Country"</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p><em>"A land of breathtaking landscapes and rich cultural traditions"</em></p>
+      <p>Kerala in southwestern India may lack the grand monuments and forts of the north, but it more than makes up for it with its breathtaking landscape. This tiny tropical state along India's Malabar Coast has palm-fringed backwaters, uncrowded beaches, tea- and spice-covered hills in the Western Ghats, and steamy jungles.</p>
+      <p>It is also rich in history, with temples, mosques and churches that have stood for centuries and a culture that includes outlandish yet profoundly transfixing dance forms, martial arts and Ayurvedic practices.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Kerala</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="alleppey.jpg" class="card-img-top" alt="Alleppey Backwaters" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Alleppey Backwaters</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Alappuzha</p>
+              <p class="card-text">A network of palm-fringed canals best explored by traditional houseboats.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="teagarden.jpg" class="card-img-top" alt="Munnar Tea Gardens" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Munnar Tea Gardens</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Munnar</p>
+              <p class="card-text">Endless rolling hills covered in lush tea plantations in the Western Ghats.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="kovalam.jpg" class="card-img-top" alt="Kovalam Beach" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <strong><h5 class="card-title">Kovalam Beach</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Thiruvananthapuram</p>
+              <p class="card-text">Famous crescent-shaped beach with lighthouse and surfing opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>Things to Do in Kerala</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Go beach hopping</div>
+        <p>One of the most popular and pioneering of them is Soul & Surf, which provides surf and yoga classes, along with accommodations</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">2. Cruise the palm-fringed backwaters</div>
+        <p>Experience the serene backwaters aboard a traditional houseboat in Alleppey or Valiyaparamba.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">3. Drink in the local spirit</div>
+        <p>To imbibe the true spirit of Kerala, try toddy, traditiionally called kallu.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">4. Savor traditional art forms</div>
+        <p>Watch Kathakali dance dramas, Theyyam rituals, and Kalarippayat martial arts performances.</p>
+      </div>
+      
+      <div class="activity-item">
+        <div class="activity-title">5. Relax in Munnar's green hills</div>
+        <p>The British favored the area in the 19th century as a coller summer escape from the sun-baked plains, and today, it retains its refreshing charm.</p>
+      </div>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <!-- Hotel 1 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="valleexterior.jpg" class="hotel-exterior" alt="The Valle Exterior">
+            <img src="valleroom.jpg" class="hotel-room" alt="The Valle Room">
+          </div>
+          <h5 class="mt-3"><strong>The Valle</strong></h5>
+          <p class="price">MYR 590+ per night</p>
+          <p class="flex-grow-1">Beautifully furnished hotel amidst tea plantations in Munnar.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="floraexterior.jpg" class="hotel-exterior" alt="Flora Misty Falls Exterior">
+            <img src="floraroom.jpg" class="hotel-room" alt="Flora Misty Falls Room">
+          </div>
+          <h5 class="mt-3"><strong>Flora Misty Falls</strong></h5>
+          <p class="price">MYR 800+ per night</p>
+          <p class="flex-grow-1">Breathtaking views near Athirappilly Waterfalls.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="marariexterior.jpg" class="hotel-exterior" alt="Marari Beach Resort Exterior">
+            <img src="marariroom.jpg" class="hotel-room" alt="Marari Beach Resort Room">
+          </div>
+          <h5 class="mt-3"><strong>Marari Beach Resort</strong></h5>
+          <p class="price">MYR 490+ per night</p>
+          <p class="flex-grow-1">4-star beachfront property in Alleppey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-plane"></i> By Air</strong></h5>
+          <p>Kerala has 4 international airports: Kochi (COK), Trivandrum (TRV), Calicut (CCJ), and Kannur (CNN). Direct flights from Middle East, Southeast Asia, and major Indian cities.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-plane"></i> By Train</strong></h5>
+          <p>Extensive rail network connects Kerala to all major Indian cities. Important stations include Trivandrum Central, Ernakulam Junction, and Kozhikode.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-plane"></i> By Bus</strong></h5>
+          <p>Excellent bus services connect Kerala to neighboring states. KSRTC operates comfortable AC and non-AC buses throughout the state.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <strong><h5><i class="fas fa-plane"></i> By Water</strong></h5>
+          <p>Ferry services operate between islands and along backwaters. Major ports at Kochi and Vizhinjam handle cruise ships & international vessels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 India Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

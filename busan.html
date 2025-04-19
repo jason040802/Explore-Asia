@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busan Travel Guide</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      height: 60vh;
+      background-image: url('busan1.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .description, .info-card, .hotel-card, .transport-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hotel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hotel-image-container {
+      height: 220px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .hotel-exterior, .hotel-room {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition: opacity 0.5s ease;
+    }
+    .hotel-exterior { opacity: 1; z-index: 1; }
+    .hotel-room { opacity: 0; z-index: 2; }
+    .hotel-card:hover .hotel-exterior { opacity: 0; }
+    .hotel-card:hover .hotel-room { opacity: 1; }
+    .hotel-card .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .activity-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="korea.html">Korea Travel</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Busan</h1>
+    <p>부산</p>
+  </header>
+
+  <div class="container my-5">
+    <!-- Description -->
+    <div class="description">
+      <p class="busan-quote">
+        <h2><em>"Busan is where mountains meet ocean and calm meets energy."</em></h2> — <span class="quote-author"><b>From the Heart of the Locals</b></span>
+      </p>
+      <p>Busan, South Korea’s coastal gem, offers a unique mix of sandy beaches, fresh seafood, and vibrant markets. It's a city where traditional temples sit peacefully beside bustling seaports and contemporary skyscrapers.</p>
+      <p>Whether you’re enjoying the sea breeze at Haeundae, hiking up to Beomeosa Temple, or browsing through Jagalchi Fish Market, Busan welcomes you with warmth and charm.</p>
+    </div>
+
+    <!-- Top Places to Visit -->
+    <section>
+      <h2 class="section-title">Top Places to Visit in Busan</h2>
+      <div class="row">
+        <!-- Haeundae Beach -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="haeundae.jpeg" class="card-img-top" alt="Haeundae Beach" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Haeundae Beach</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Haeundae-gu, Busan</p>
+              <p class="card-text">Busan’s most iconic shoreline, where golden sands, gentle waves, and a lively boardwalk create the perfect seaside escape in South Korea.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gamcheon Culture Village -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="gamcheon.jpeg" class="card-img-top" alt="Gamcheon Culture Village" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Gamcheon Culture Village</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Saha-gu, Busan</p>
+              <p class="card-text">Reflects Busan’s artistic spirit and resilient history, where once a modest mountainside settlement now thrives as a living canvas of local heritage and creativity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jagalchi Market -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 border-0 rounded-lg">
+            <img src="jagalchi.jpeg" class="card-img-top" alt="Jagalchi Market" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Jagalchi Market</strong></h5>
+              <p class="card-text"><strong>Location:</strong> Jung-gu, Busan</p>
+              <p class="card-text">Korea’s largest seafood market, offers an authentic taste of Busan’s coastal culture, where the daily catch comes to life through the calls of seasoned fishmongers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <div class="info-card">
+      <h5><i class="fas fa-list-ul mr-2"></i>More Things to Do in Busan</h5>
+      <div class="activity-item">
+        <div class="activity-title">1. Visit Beomeosa Temple</div>
+        <p>Serene temple nestled in the mountains with peaceful trails and historical beauty.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">2. Walk the Oryukdo Skywalk</div>
+        <p>A thrilling glass-floored walkway with panoramic coastal views.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">3. Ride the Songdo Cable Car</div>
+        <p>Get a bird’s-eye view of Busan’s stunning coastline from above the sea.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">4. Explore BIFF Square</div>
+        <p>A hub for Korean cinema culture, street food, and trendy shops.</p>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">5. Sunset at Gwangalli Beach</div>
+        <p>Enjoy beautiful views of Gwangan Bridge lighting up the night sky.</p>
+      </div>
+    </div>
+
+    <!-- Hotels -->
+    <h2 class="section-title">Recommended Hotels</h2>
+    <div class="row">
+      <!-- Hotel 1 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="paradise-exterior.jpeg" class="hotel-exterior" alt="Paradise Hotel Exterior">
+            <img src="paradise-room.jpeg" class="hotel-room" alt="Paradise Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>Paradise Hotel Busan</strong></h5>
+          <p class="price">MYR 1000+ per night</p>
+          <p class="flex-grow-1">Luxury beachfront hotel at Haeundae with hot spring spas and sea views.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="lavi-exterior.jpeg" class="hotel-exterior" alt="La Valse Hotel Exterior">
+            <img src="lavi-room.jpeg" class="hotel-room" alt="La Valse Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>La Valse Hotel</strong></h5>
+          <p class="price">MYR 600+ per night</p>
+          <p class="flex-grow-1">Stylish and modern with scenic views of the harbor and Jagalchi area.</p>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="col-md-4 d-flex">
+        <div class="hotel-card w-100 d-flex flex-column">
+          <div class="hotel-image-container">
+            <img src="aventree-exterior.jpeg" class="hotel-exterior" alt="Aventree Hotel Exterior">
+            <img src="aventree-room.jpeg" class="hotel-room" alt="Aventree Hotel Room">
+          </div>
+          <h5 class="mt-3"><strong>Aventree Hotel Busan</strong></h5>
+          <p class="price">MYR 300+ per night</p>
+          <p class="flex-grow-1">Budget-friendly and convenient location near Gukje Market and BIFF Square.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <h2 class="section-title">Getting Around</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-subway"></i><b> Busan Metro</b></h5>
+          <p>Clean, efficient, and connects major attractions like beaches, markets, and stations.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-taxi"></i><b> Taxi</b></h5>
+          <p>Reliable and widely available. Apps like KakaoTaxi are handy for non-Korean speakers.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-bus"></i><b> Buses</b></h5>
+          <p>Frequent and cover even remote attractions like Beomeosa and Oryukdo.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="transport-card">
+          <h5><i class="fas fa-train"></i><b> KTX Train</b></h5>
+          <p>Travel from Seoul to Busan in just 2.5 hours via high-speed KTX train.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Korea Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
