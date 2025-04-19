@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Asia</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero video,
+    .hero img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 5px solid #d2e7ff;
+    }
+
+    .card-body {
+      background: #fff;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .btn-primary {
+      background-color: #0d0b53;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 20px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .title-image {
+      display: block;
+      margin: 40px auto 20px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .destination-section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      color: #f39c12;
+    }
+
+    .testimonial-box {
+  background: #ffffff;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px #212529;
+  border-color: #9caab9;
+}
+
+.testimonial-box h5 {
+  font-style: italic;
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.testimonial-box .quote-author {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.testimonial-box .quote-author strong {
+  font-weight: bold;
+  color: #0d0b53;
+}
+
+.testimonial-box .quote-author span {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.testimonial-img {
+  width: 80px; /* reduced from 80px */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><strong>Home</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations"><strong>Destinations</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><strong>Contact</strong></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner-->
+<header class="hero">
+  <img src="world.jpeg" class="card-img-top" alt="World">
+  <div class="text-center">
+    <h1 class="display-4" style="font-family: 'Cinzel', serif;"><strong>Discover Asia</strong></h1>
+    <p class="lead">Your journey begins here</p>
+  </div>
+</header>
+
+<!-- Welcome Section -->
+<section class="container my-5">
+  <h2 class="section-title">Welcome</h2>
+  <p class="text-center lead">Start your journey to explore the world's most fascinating places.</p>
+</section>
+
+<!-- Destination Cards Section -->
+<section id="destinations" class="container my-5">
+
+  <div class="container destination-section">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <img src="word.jpg" alt="Checkout Beautiful Places Around the Asia" class="title-image"/>
+
+      <!-- Japan -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="japanmain.jpeg" class="card-img-top" alt="Japan">
+          <div class="card-body">
+            <h5 class="card-title">Japan</h5>
+            <p class="card-text">Discover the traditions, temples, and neon lights of Japan.</p>
+            <a href="japan.html" class="btn btn-primary">Explore Japan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korea -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="koreamain.jpeg" class="card-img-top" alt="Korea">
+          <div class="card-body">
+            <h5 class="card-title">Korea</h5>
+            <p class="card-text">Experience modern K-culture and timeless heritage in Korea.</p>
+            <a href="korea.html" class="btn btn-primary">Explore Korea</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- India -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="indiamain.jpeg" class="card-img-top" alt="India">
+          <div class="card-body">
+            <h5 class="card-title">India</h5>
+            <p class="card-text">Journey through a land of vibrant culture, colors, and cuisine.</p>
+            <a href="india.html" class="btn btn-primary">Explore India</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Malaysia -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="malaysiamain.jpeg" class="card-img-top" alt="Malaysia">
+          <div class="card-body">
+            <h5 class="card-title">Malaysia</h5>
+            <p class="card-text">Explore diverse cultures, rainforests, and vibrant cities.</p>
+            <a href="Malaysia.html" class="btn btn-primary">Explore Malaysia</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Philippines -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="philippinesmain.jpeg" class="card-img-top" alt="Philippines">
+          <div class="card-body">
+            <h5 class="card-title">Philippines</h5>
+            <p class="card-text">Discover crystal-clear beaches and warm island hospitality.</p>
+            <a href="philippines.html" class="btn btn-primary">Explore Philippines</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- China -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="chinamain.jpeg" class="card-img-top" alt="China">
+          <div class="card-body">
+            <h5 class="card-title">China</h5>
+            <p class="card-text">Uncover ancient dynasties, Great Wall views, and urban wonders.</p>
+            <a href="china.html" class="btn btn-primary">Explore China</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thailand -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="thailandmain.jpeg" class="card-img-top" alt="Thailand">
+          <div class="card-body">
+            <h5 class="card-title">Thailand</h5>
+            <p class="card-text">From golden temples to tropical islands and spicy cuisine.</p>
+            <a href="thailand.html" class="btn btn-primary">Explore Thailand</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vietnam -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="vietnammain.jpeg" class="card-img-top" alt="Vietnam">
+          <div class="card-body">
+            <h5 class="card-title">Vietnam</h5>
+            <p class="card-text">Sail through Ha Long Bay and taste the flavors of Hanoi.</p>
+            <a href="vietnam.html" class="btn btn-primary">Explore Vietnam</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Asia Highlights Section (Two Rows, Right-Aligned) -->
+<section class="container my-5">
+  <h2 class="fw-bold text-start text-align:center">Why Asia Highlights</h2>
+
+  <div class="row justify-content-center text-end mt-4">
+
+    <div class="col-md-6 mb-4">
+      <div class="p-4 border rounded bg-white h-100">
+        <i class="fas fa-hourglass-half fa-2x mb-3"></i>
+        <h5 class="text-center"><strong>Customize Your Tour</strong></h5>
+        <ul class="list-unstyled mt-2">
+          <li>1. Travel Advisors Rooted in Asia</li>
+          <li>2. Instant Response, No More Waits!</li>
+          <li>3. Direct Connections, Supreme Values</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="p-4 border rounded bg-white h-100">
+        <i class="fas fa-map-marked-alt fa-2x mb-3"></i>
+        <h5 class="text-center"><strong>Maximize Your Flexibility</strong></h5>
+        <ul class="list-unstyled mt-2">
+          <li>1. Your own personal guide and ride.</li>
+          <li>2. Explore at your own pace.</li>
+          <li>3. Unparalleled flexibility, impossible on a group tour.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="p-4 border rounded bg-white h-100">
+        <i class="fas fa-hand-holding-heart fa-2x mb-3"></i>
+        <h5 class="text-center"><strong>Ensure Your Satisfactory</strong></h5>
+        <ul class="list-unstyled mt-2">
+          <li>1. The Top 20% nationwide guides at your service.</li>
+          <li>2. 20% more space on your group's transportation.</li>
+          <li>3. 24/7 emergency support.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="p-4 border rounded bg-white h-100">
+        <i class="fas fa-eye fa-2x mb-3"></i>
+        <h5 class="text-center"><strong>Celebrate Your Journey</strong></h5>
+        <ul class="list-unstyled mt-2">
+          <li>1. Family adventures</li>
+          <li>2. Celebrate milestones with style!</li>
+          <li>3. Photographer service for special moments</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="section-title">What Travelers Say?</h2>
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="testimonial-box text-center">
+        <img src="emily.jpg" alt="Emily R." class="testimonial-img">
+        <h5><em>"It’s a continent that captures your soul and never lets go."</em></h5>
+        <p class="quote-author"><strong>Emily R.</strong> <span>(Australia)</span></p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="testimonial-box text-center">
+        <img src="aisha.jpg" alt="Aisha M." class="testimonial-img">
+        <h5><em>"An unforgettable journey through Japan! The itinerary was seamless."</em></h5>
+        <p class="quote-author"><strong>Aisha M.</strong> <span>(Malaysia)</span></p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="testimonial-box text-center">
+        <img src="siti.jpg" alt="Siti Nur." class="testimonial-img">
+        <h5><em>"The cultural insight and food experiences in Vietnam were priceless."</em></h5>
+        <p class="quote-author"><strong>Siti Nur</strong> <span>(Singapore)</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center p-4 bg-dark text-white">
+  <p class="mt-3">Follow us on</p>
+  <div class="d-flex justify-content-center my-3">
+    <a href="https://www.facebook.com/LonelyPlanet" target="_blank" class="text-white mx-3">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://twitter.com/lonelyplanet" target="_blank" class="text-white mx-3">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/lonelyplanet/" target="_blank" class="text-white mx-3">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@lonelyplanet" target="_blank" class="text-white mx-3">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.youtube.com/user/LonelyPlanet" target="_blank" class="text-white mx-3">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 Explore Asia. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
